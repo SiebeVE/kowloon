@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2a92a40cc27b8c4244f48ac297e18841",
-    "content-hash": "6d03ff14f2d83b23557bb6809702da36",
+    "hash": "65e94bb14942bf38eed1fa558631bdc7",
+    "content-hash": "401ee941f4f35e6d7a71375cd6884411",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -114,6 +114,57 @@
                 "preload"
             ],
             "time": "2015-11-09 22:51:51"
+        },
+        {
+            "name": "dimsav/laravel-translatable",
+            "version": "v6.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dimsav/laravel-translatable.git",
+                "reference": "95c56bd6475d2f64b8b01e1b225a32b1c79dc8e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dimsav/laravel-translatable/zipball/95c56bd6475d2f64b8b01e1b225a32b1c79dc8e4",
+                "reference": "95c56bd6475d2f64b8b01e1b225a32b1c79dc8e4",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.1",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.0",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dimsav\\Translatable\\": "src/Translatable/"
+                },
+                "classmap": [
+                    "tests"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dimitrios Savvopoulos",
+                    "email": "ds@dimsav.com",
+                    "homepage": "http://dimsav.com"
+                }
+            ],
+            "description": "A Laravel package for multilingual models",
+            "keywords": [
+                "database",
+                "language",
+                "laravel",
+                "translation"
+            ],
+            "time": "2016-08-19 12:49:25"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -631,6 +682,54 @@
                 "debugbar"
             ],
             "time": "2016-09-15 14:01:59"
+        },
+        {
+            "name": "mcamara/laravel-localization",
+            "version": "1.1.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mcamara/laravel-localization.git",
+                "reference": "400a5e577f34acf4b0e4f9cade10a63d91899152"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/400a5e577f34acf4b0e4f9cade10a63d91899152",
+                "reference": "400a5e577f34acf4b0e4f9cade10a63d91899152",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.2",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [],
+                "psr-0": {
+                    "Mcamara\\LaravelLocalization": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Cámara",
+                    "email": "mcamara88@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easy localization for Laravel",
+            "homepage": "https://github.com/mcamara/laravel-localization",
+            "keywords": [
+                "laravel",
+                "localization",
+                "php"
+            ],
+            "time": "2016-12-31 17:44:39"
         },
         {
             "name": "monolog/monolog",

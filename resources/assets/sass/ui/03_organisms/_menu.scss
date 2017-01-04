@@ -1,0 +1,77 @@
+.navbar
+{
+  background-color: $navbar-default-bg;
+  display: block;
+  width: $menu-width;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  z-index: 20;
+  &.opened
+  {
+    width: $menu-width-full;
+  }
+  .hamburger
+  {
+    width: $menu-width;
+    .icon-menu
+    {
+      color: #FFFFFF;
+      display: block;
+      padding: 15px 16px;
+      background-color: darken($navbar-default-bg, 5%);
+    }
+  }
+  .footer
+  {
+    position: absolute;
+    bottom: 0;
+    font-size: 1.39em;
+    width: $menu-width-full;
+    display: block;
+    text-align: center;
+    color: lighten($navbar-default-bg, 44%);
+  }
+
+  ul
+  {
+    @include reset-list();
+    padding-top: 25px;
+    &.help
+    {
+      color: #A2A2A2;
+    }
+    &:not(:last-of-type):after
+    {
+      content: "";
+      height: 2px;
+      background-color: $body-background;
+      display: block;
+      margin: 0 6px;
+    }
+
+    &.links
+    {
+      color: #FFFFFF;
+    }
+    li
+    {
+      padding-bottom: 16px;
+      a
+      {
+        text-decoration: none;
+        color: inherit;
+        i
+        {
+          font-size: 1.25em;
+          display: inline-block;
+          width: $menu-width;
+          text-align: center;
+          vertical-align: text-bottom;
+        }
+      }
+    }
+  }
+}

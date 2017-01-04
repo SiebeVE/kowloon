@@ -1,9 +1,33 @@
-
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
 // Variables
 @import "variables";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "plugins/bootstrap";
+
+/* Helpers */
+@import "helpers/extends";
+@import "helpers/icons";
+
+/* Main styling */
+@import "config/fonts";
+@import "config/root";
+
+
+/* Fundaments */
+//@import "ui/00_fundaments/**/*";
+
+
+/* Atoms */
+//@import "ui/01_atoms/**/*";
+
+
+/* Molecules */
+//@import "ui/02_molecules/**/*";
+
+
+/* Buckets */
+@import "ui/03_organisms/menu";
+
+
+/* Buckets */
+//@import "ui/04_buckets/**/*";

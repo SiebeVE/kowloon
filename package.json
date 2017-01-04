@@ -6,9 +6,27 @@
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-iconfont": "^8.0.1",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass-globbing": "^0.0.2",
+    "gulp-uglify": "^2.0.0",
+    "imagemin-gifsicle": "^5.1.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-optipng": "^5.2.1",
+    "imagemin-svgo": "^5.2.0",
     "jquery": "^3.1.0",
     "laravel-elixir": "^6.0.0-14",
-    "laravel-elixir-webpack-official": "^1.0.2"
+    "laravel-elixir-webpack-official": "^1.0.2",
+    "lodash": "*",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "laravel-elixir-browsersync-official": "^1.0.0"
   }
 }

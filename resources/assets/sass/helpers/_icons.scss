@@ -1,0 +1,121 @@
+@font-face
+{
+  font-family: "icons";
+  src: url('../fonts/icons.eot');
+  src: url('../fonts/icons.eot?#iefix') format('eot'),
+  url('../fonts/icons.woff2') format('woff2'),
+  url('../fonts/icons.woff') format('woff'),
+  url('../fonts/icons.ttf') format('truetype'),
+  url('../fonts/icons.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * Icon elements */
+[class^="icon-"], [class*=" icon-"]
+{
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons', serif !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before
+{
+  content: "\EA01"
+}
+
+.icon-search:before
+{
+  content: "\EA02"
+}
+
+.icon-question-mark:before
+{
+  content: "\EA03"
+}
+
+.icon-dog:before
+{
+  content: "\EA04"
+}
+
+.icon-cat:before
+{
+  content: "\EA05"
+}
+
+.icon-fish:before
+{
+  content: "\EA06"
+}
+
+.icon-bird:before
+{
+  content: "\EA07"
+}
+
+.icon-hamster:before
+{
+  content: "\EA08"
+}
+
+//.icon-zoom:before { content: "\EA02" }
+
+/*
+ * Media Queries */
+@mixin icon() {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons', serif !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icon-menu() {
+  content: "\EA01"
+}
+
+@mixin icon-search() {
+  content: "\EA02"
+}
+
+@mixin icon-question-mark() {
+  content: "\EA03"
+}
+
+@mixin icon-dog() {
+  content: "\EA04"
+}
+
+@mixin icon-cat() {
+  content: "\EA05"
+}
+
+@mixin icon-fish() {
+  content: "\EA06"
+}
+
+@mixin icon-bird() {
+  content: "\EA07"
+}
+
+@mixin icon-hamster() {
+  content: "\EA08"
+}

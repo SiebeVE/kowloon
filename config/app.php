@@ -179,6 +179,8 @@ return [
         App\Providers\RouteServiceProvider::class,
 
 	    Barryvdh\Debugbar\ServiceProvider::class,
+	    Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+	    Dimsav\Translatable\TranslatableServiceProvider::class,
     ],
 
     /*
@@ -228,6 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
     ],
 
 ];

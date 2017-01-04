@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
+
+	Route::get( '/', 'HomeController@getHome' )->name( 'home' );
+	Route::get( '/about-us', 'HomeController@getAboutUs' )->name( 'about-us' );
+
+	Route::get( '/products/{category}', 'ProductController@getProduct' );
+
+});
