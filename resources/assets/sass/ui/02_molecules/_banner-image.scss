@@ -1,0 +1,26 @@
+.exclusive
+{
+  width: $banner-exclusive-width;
+  background: url("/images/layouts/pattern.png") repeat 0 45px;
+  @include title-font();
+  text-transform: none;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-align: center;
+  p
+  {
+    margin: 0;
+  }
+  .deals-first-read
+  {
+    margin: 34px auto;
+    width: 75%;
+    font-size: $banner-font-size-first-read;
+    line-height: $banner-font-size-first-read;
+  }
+  .deals-second-read
+  {
+    font-size: $banner-font-size-second-read;
+    line-height: $banner-font-size-second-read;
+  }
+}

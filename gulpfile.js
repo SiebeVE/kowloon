@@ -88,7 +88,7 @@ gulp.task('iconfont', function () {
 			appendUnicode: false,
 			fontName: 'icons',
 			fontPath: '../fonts/',
-			formats: [ 'ttf', 'eot', 'woff' ],
+			formats: [ 'ttf', 'eot', 'woff', 'woff2', 'svg' ],
 			className: 'icon',
 			normalize: true,
 			timestamp: Math.round(Date.now() / 1000),

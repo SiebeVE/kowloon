@@ -3,19 +3,30 @@
   background-color: $navbar-default-bg;
   display: block;
   width: $menu-width;
-  height: 100%;
   white-space: nowrap;
   overflow: hidden;
   position: absolute;
   left: 0;
+  height: inherit;
   z-index: 20;
+  transition: width $transition-time ease-out;
+  font-size: $font-size-menu;
   &.opened
   {
+    transition: width $transition-time ease-in, opacity $transition-time ease-in;
     width: $menu-width-full;
+    .footer
+    {
+      span:not(:first-of-type)
+      {
+        opacity: 1;
+      }
+    }
   }
   .hamburger
   {
     width: $menu-width;
+    cursor: pointer;
     .icon-menu
     {
       color: #FFFFFF;
@@ -27,21 +38,42 @@
   .footer
   {
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
+    left: 18px;
     font-size: 1.39em;
-    width: $menu-width-full;
+    width: calc(100% - 18px);
     display: block;
-    text-align: center;
     color: lighten($navbar-default-bg, 44%);
+
+    span[class^="char"]
+    {
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+    }
+    span:not(:first-of-type)
+    {
+      opacity: 0;
+      transform: scale(100);
+      transition: opacity $transition-time ease-out, opacity $transition-time ease-out;
+    }
   }
 
   ul
   {
     @include reset-list();
-    padding-top: 25px;
-    &.help
+    padding-top: 20px;
+    &.help,
+    &.contact
     {
       color: #A2A2A2;
+    }
+    &.contact
+    {
+      li a i
+      {
+        font-size: 1em;
+      }
     }
     &:not(:last-of-type):after
     {

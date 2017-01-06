@@ -1,0 +1,25 @@
+.bold
+{
+  font-weight: bold;
+}
+
+.size-1
+{
+  font-size: $font-size-heading;
+}
+
+.size-3{
+  font-size: $font-size-3;
+}
+
+.text-helper,
+.brand-text
+{
+  color: $text-color-second;
+}
+
+.brand-text
+{
+  text-align: center;
+  margin: 0 75px 25px;
+}

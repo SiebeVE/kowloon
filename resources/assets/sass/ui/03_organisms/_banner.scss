@@ -1,0 +1,19 @@
+.banner
+{
+  height: $banner-height;
+  width: 100%;
+  display: flex;
+  background-color: $banner-color-background;
+  .email
+  {
+    padding: 40px;
+    flex-grow: 1;
+    p:first-child{
+      margin-bottom: 3px;
+    }
+    label{
+      display: block;
+      margin-top: 5px;
+    }
+  }
+}

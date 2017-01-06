@@ -15,23 +15,27 @@
 </head>
 <body>
 <div id="app" class="container">
-	<nav class="navbar opened-">
-		<div class="hamburger">
+	<nav class="navbar">
+		<div class="hamburger" id="menu-toggle">
 			<i class="icon-menu"></i>
 		</div>
 		<ul class="help">
 			<li><a href="#"><i class="icon-search"></i>Search</a></li>
 			<li><a href="#"><i class="icon-question-mark"></i>FAQ</a></li>
 		</ul>
+		<ul class="contact">
+			<li><a href="{{route('about-us')}}"><i class="icon-contact"></i>Contact</a></li>
+		</ul>
 		<ul class="links">
-			<li><a href="#"><i class="icon-dog"></i>Dogs</a></li>
-			<li><a href="#"><i class="icon-cat"></i>Cats</a></li>
-			<li><a href="#"><i class="icon-fish"></i>Fish</a></li>
-			<li><a href="#"><i class="icon-bird"></i>Birds</a></li>
-			<li><a href="#"><i class="icon-hamster"></i>Small animals</a></li>
+			<li class="dog-hover"><a href="{{route('category', 'dog')}}"><i class="icon-dog"></i>Dogs</a></li>
+			<li class="cat-hover"><a href="{{route('category', 'cat')}}"><i class="icon-cat"></i>Cats</a></li>
+			<li class="fish-hover"><a href="{{route('category', 'fish')}}"><i class="icon-fish"></i>Fish</a></li>
+			<li class="bird-hover"><a href="{{route('category', 'bird')}}"><i class="icon-bird"></i>Birds</a></li>
+			<li class="hamster-hover"><a href="{{route('category', 'small-animals')}}"><i class="icon-hamster"></i>Small animals</a></li>
+			<li class="other-hover"><a href="{{route('category', 'other')}}"><i class="icon-other"></i>Other</a></li>
 		</ul>
 		<div class="footer choplin">
-			Kowloon
+			<a id="kowloon-menu-footer" href="{{ route('home') }}">Kowloon</a>
 		</div>
 	</nav>
 	<div class="content">

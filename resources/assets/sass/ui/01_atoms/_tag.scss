@@ -1,0 +1,59 @@
+.tag
+{
+  display: inline;
+  font-size: 14px;
+  color: $text-color-second;
+  background-color: $tag-background-color;
+  align-self: center;
+  padding: 6px 15px 6px 8px;
+  border-radius: 0 2px 2px 0;
+  position: relative;
+  margin-left: 16px;
+  &:before
+  {
+    @include icon();
+    @include icon-tag-front();
+    position: absolute;
+    top: 0;
+    left: -12px;
+    color: $tag-background-color;
+    font-size: 1.86em;
+  }
+  &.category
+  {
+    padding-left: 18px;
+    &:after
+    {
+      content: "";
+      position: absolute;
+      border: 5px solid;
+      border-radius: 100%;
+      top: 8px;
+      left: 2px;
+      &.dog
+      {
+        @include brand("dog");
+      }
+      &.cat
+      {
+        @include brand("cat");
+      }
+      &.fish
+      {
+        @include brand("fish");
+      }
+      &.bird
+      {
+        @include brand("bird");
+      }
+      &.hamster
+      {
+        @include brand("hamster");
+      }
+      &.other
+      {
+        @include brand("other");
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.tags{
+  line-height: 1;
+  display: flex;
+  &:before{
+    @include title-font();
+    content: "K";
+    font-size: 30px;
+    color: #FFFFFF;
+  }
+
+
+}

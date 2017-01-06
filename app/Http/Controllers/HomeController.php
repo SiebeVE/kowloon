@@ -17,12 +17,21 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the homepage.
      *
      * @return \Illuminate\Http\Response
      */
     public function getHome()
     {
         return view('home');
+    }
+
+	/**
+	 * Show the about us page
+	 *
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+	 */
+	public function getAboutUs() {
+		return view('about-us');
     }
 }

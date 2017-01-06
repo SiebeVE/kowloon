@@ -4,5 +4,9 @@
  * include Vue and Vue Resource. This gives a great starting point for
  * building robust, powerful web applications using Vue and Laravel.
  */
-
-require('./bootstrap');
+window.cheet = require('cheet.js');
+window.$ = window.jQuery = require('jquery');
+require('./libs/lettering.min');
+require('bootstrap-sass');
+require('./menu');
+require('./faq');

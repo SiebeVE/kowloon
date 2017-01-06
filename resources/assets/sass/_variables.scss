@@ -1,5 +1,7 @@
 // Body
 $body-background: #454545;
+$divider-content: lighten($body-background, 11%);
+$transition-time: .2s;
 
 // Borders
 $laravel-border-color: darken($body-background, 10%);
@@ -14,12 +16,18 @@ $brand-cat: #8787FF;
 $brand-fish: #FFB93F;
 $brand-bird: #7BFF81;
 $brand-small: #7BE5FF;
+$brand-other: #FFFFFF;
 
 // Typography
 $font-family-sans-serif: "Arial", "Helvetica", sans-serif;
-$font-size-base: 22px;
+$font-size-heading: 40px;
+$font-size-menu: 22px;
+$font-size-text: 14px;
+$font-size-3: 20px;
+$line-height-text: 22px;
 $line-height-base: 1.8;
-$text-color: #CECECE;
+$text-color-second: #CECECE;
+$text-color: #FFFFFF;
 
 // Navbar
 $navbar-default-bg: darken($body-background, 7.5%);
@@ -29,7 +37,6 @@ $btn-default-color: $text-color;
 
 // Inputs
 $input-border: lighten($text-color, 40%);
-//$input-border-focus: lighten($brand-primary, 25%);
 $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
@@ -60,3 +67,39 @@ $screen-sm-min: $screen-sm !default;
 $menu-width: 60px;
 $menu-width-full: 216px;
 $container-width: 1280px;
+$content-bottom-margin: 100px;
+
+// Banner
+$banner-height: 185px;
+$banner-color-background: lighten($body-background, 10%);
+$banner-exclusive-width: 613px;
+$banner-font-size-first-read: 44px;
+$banner-font-size-second-read: 20px;
+
+// Product
+$product-height: 200px;
+$product-background: lighten($body-background, 6.5%);
+$product-border-color: lighten($product-background, 10.75%);
+
+// Input
+$input-border-color: lighten($body-background, 33.5%);
+$input-border-size: 2px;
+$input-font-size: 14px;
+$input-padding: 12px;
+$input-width: 255px;
+
+// Button
+$button-inline-width: 45px;
+$button-inline-height: $button-inline-width;
+$button-inline-color: $navbar-default-bg;
+$button-inline-font-size: 16px;
+$button-inline-font-color: #FFFFFF;
+$button-width: $input-width + 18;
+$button-font-size: 19px;
+$button-font-color: $button-inline-font-color;
+
+// Tags
+$tag-background-color: $navbar-default-bg;
+
+// Faqs
+$faq-background-color: $product-border-color;

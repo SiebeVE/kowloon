@@ -1,0 +1,41 @@
+.products
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  article
+  {
+    border: 1px solid $product-border-color;
+    background-color: $product-background;
+    height: $product-height;
+    padding: 5px;
+    &:not(:last-of-type)
+    {
+      margin-right: 6px;
+    }
+    img
+    {
+      display: block;
+      width: 100%;
+    }
+    .product-description
+    {
+      color: #FFFFFF;
+      padding: 8px 10px 0;
+      span
+      {
+        font-size: 16px;
+      }
+      @include clearfix();
+      .product-item-title
+      {
+        float: left;
+        font-weight: bold;
+      }
+      .product-item-price
+      {
+        float: right;
+      }
+    }
+  }
+}

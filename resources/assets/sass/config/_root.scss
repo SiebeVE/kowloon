@@ -15,7 +15,7 @@ html, body
 {
   margin: 0;
   padding: 0;
-  height: 100%;
+  position: relative;
 }
 
 body
@@ -23,18 +23,28 @@ body
   color: $text-color;
   background: $body-background;
   font-family: $font-family-sans-serif;
-  font-size: $font-size-base;
+  font-size: $font-size-text;
   line-height: $line-height-base;
   @include text-fix();
 }
 
-.content{
-  margin-left: $menu-width;
-  z-index: 1;
+a
+{
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
 }
 
-h1, h2, h3, h4, h5, h6, .choplin
+.content
 {
-  font-family: "Choplin", serif;
-  text-transform: uppercase;
+  margin-left: $menu-width;
+  margin-bottom: $content-bottom-margin;
+  z-index: 1;
+
+  .inner-content
+  {
+    margin-left: 128px;
+    margin-right: 132px;
+    margin-top: 50px;
+  }
 }

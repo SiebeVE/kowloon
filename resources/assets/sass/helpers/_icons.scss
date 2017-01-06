@@ -1,12 +1,12 @@
 @font-face
 {
   font-family: "icons";
-  src: url('../fonts/icons.eot');
-  src: url('../fonts/icons.eot?#iefix') format('eot'),
-  url('../fonts/icons.woff2') format('woff2'),
-  url('../fonts/icons.woff') format('woff'),
-  url('../fonts/icons.ttf') format('truetype'),
-  url('../fonts/icons.svg#icons') format('svg');
+  src: url('/fonts/icons.eot');
+  src: url('/fonts/icons.eot?#iefix') format('eot'),
+  url('/fonts/icons.woff2') format('woff2'),
+  url('/fonts/icons.woff') format('woff'),
+  url('/fonts/icons.ttf') format('truetype'),
+  url('/fonts/icons.svg#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -69,7 +69,28 @@
   content: "\EA08"
 }
 
-//.icon-zoom:before { content: "\EA02" }
+.icon-heart:before
+{
+  content: "\EA09"
+}
+
+.icon-other:before
+{
+  content: "\EA0A"
+}
+
+.icon-contact:before
+{
+  content: "\EA0B"
+}
+
+.icon-tag-front:before {
+  content: "\EA0C"
+}
+
+.icon-arrow:before {
+  content: "\EA0D"
+}
 
 /*
  * Media Queries */
@@ -118,4 +139,24 @@
 
 @mixin icon-hamster() {
   content: "\EA08"
+}
+
+@mixin icon-heart() {
+  content: "\EA09"
+}
+
+@mixin icon-other() {
+  content: "\EA0A"
+}
+
+@mixin icon-contact() {
+  content: "\EA0B"
+}
+
+@mixin icon-tag-front() {
+  content: "\EA0C"
+}
+
+@mixin icon-arrow() {
+  content: "\EA0D"
 }

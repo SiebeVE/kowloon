@@ -1,1 +1,32 @@
-.btn { }
+button
+{
+  cursor: pointer;
+  border: none;
+  &.inline
+  {
+    width: $button-inline-width;
+    height: $button-inline-height;
+    position: absolute;
+    z-index: 20;
+    background-color: $button-inline-color;
+    right: 2px;
+    top: -1px;
+    font-size: $button-inline-font-size;
+    color: $button-inline-font-color;
+    text-transform: uppercase;
+    &:hover
+    {
+      top: 0;
+    }
+  }
+  &.submit
+  {
+    width: $button-width;
+    font-size: $button-font-size;
+    color: $button-font-color;
+    font-weight: bold;
+    padding: 11.5px 0;
+    background-color: $brand-dog;
+    line-height: 1;
+  }
+}

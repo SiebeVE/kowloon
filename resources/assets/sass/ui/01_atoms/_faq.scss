@@ -1,0 +1,52 @@
+.faq
+{
+  width: 100%;
+  background-color: $faq-background-color;
+  padding: 18px 23px;
+  &:not(:last-of-type)
+  {
+    margin-bottom: 10px;
+  }
+  .faq-title
+  {
+    cursor: pointer;
+    &:after
+    {
+      @include icon();
+      @include icon-arrow();
+      position: absolute;
+      font-size: 14px;
+      right: 0;
+      transform: rotate(0deg);
+      transition: transform $transition-time ease-out;
+    }
+    font-family: $font-family-sans-serif;
+    font-weight: bold;
+    text-transform: none;
+    font-size: $font-size-3;
+    position: relative;
+  }
+  p
+  {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 20px;
+    overflow: hidden;
+    line-height: 19px;
+    max-height: 0;
+    transition: max-height $transition-time ease-out;
+  }
+  &.opened
+  {
+    p
+    {
+      max-height: 6em;
+      transition: max-height $transition-time ease-in;
+    }
+    .faq-title:after
+    {
+      transform: rotate(90deg);
+      transition: transform $transition-time ease-in;
+    }
+  }
+}

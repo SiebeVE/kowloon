@@ -1,0 +1,50 @@
+.about-us
+{
+  h1
+  {
+    margin-top: 30px;
+  }
+  h2
+  {
+    margin-bottom: 6px;
+  }
+  p:not(:last-child)
+  {
+    margin-bottom: 20px;
+  }
+  section
+  {
+    padding: 40px 0;
+  }
+  .info-contact
+  {
+    display: flex;
+    padding-top: 35px;
+    .contact
+    {
+      padding: 0 0 20px 20px;
+      border-left: 1px solid $divider-content;
+      border-bottom: 1px solid $divider-content;
+      width: 25%;
+      ul
+      {
+        @include reset-list();
+        li
+        {
+          line-height: calc(#{$line-height-text} - 1px);
+          font-size: $font-size-text;
+          &:before
+          {
+            content: "•";
+            padding-right: 2px;
+          }
+        }
+      }
+    }
+  }
+  textarea
+  {
+    width: 80%;
+    height: 138px;
+  }
+}

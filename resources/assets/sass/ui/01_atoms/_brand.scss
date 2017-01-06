@@ -1,0 +1,59 @@
+.color-dog
+{
+  @include brand("dog");
+}
+
+.color-cat
+{
+  @include brand("cat");
+}
+
+.color-fish
+{
+  @include brand("fish");
+}
+
+.color-bird
+{
+  @include brand("bird");
+}
+
+.color-hamster
+{
+  @include brand("hamster");
+}
+
+.color-other
+{
+  @include brand("other");
+}
+
+.dog-hover:hover
+{
+  @include brand("dog");
+}
+
+.cat-hover:hover
+{
+  @include brand("cat");
+}
+
+.fish-hover:hover
+{
+  @include brand("fish");
+}
+
+.bird-hover:hover
+{
+  @include brand("bird");
+}
+
+.hamster-hover:hover
+{
+  @include brand("hamster");
+}
+
+.other-hover:hover
+{
+  @include brand("other");
+}
