@@ -1,0 +1,56 @@
+.content
+{
+  .inner-content.overview
+  {
+    margin-top: 33px;
+  }
+}
+
+.overview
+{
+  h1
+  {
+    padding-top: 23px;
+  }
+  .filter
+  {
+    padding: 14px 0 14px 60px;
+    .title
+    {
+      font-weight: bold;
+      font-size: calc(#{$font-size-text} + 1px);
+      text-transform: none;
+      position: relative;
+      cursor: pointer;
+      margin-bottom: 10px;
+      &:after
+      {
+        @include arrow();
+        right: initial;
+        font-size: 10px;
+        top: 4px;
+        margin-left: 10px;
+        color: $input-border-color;
+      }
+    }
+    .filter-content
+    {
+      max-height: 0;
+      transition: max-height $transition-time ease-out;
+      overflow: hidden;
+      padding-left: 63px;
+    }
+    &.opened
+    {
+      .title:after
+      {
+        @include arrow-open();
+      }
+      .filter-content
+      {
+        max-height: 160px;
+        transition: max-height $transition-time ease-in;
+      }
+    }
+  }
+}

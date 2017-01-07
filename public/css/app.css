@@ -515,6 +515,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -653,6 +660,38 @@ textarea {
   padding: 12px;
 }
 
+.filter .filter-group {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.filter .filter-group label {
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 20px 0 10px;
+}
+
+.filter .filter-group input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #FFFFFF;
+  border: 2px solid #9a9a9a;
+  display: inline-block;
+  position: relative;
+  width: 19px;
+  height: 19px;
+  padding: 0;
+  margin: 0;
+}
+
+.filter .filter-group input[type=checkbox]:checked {
+  background-color: #323232;
+  box-shadow: inset 0 0 0 2px #FFFFFF;
+}
+
 button {
   cursor: pointer;
   border: none;
@@ -692,7 +731,7 @@ button.submit {
   background-color: #323232;
   -ms-grid-row-align: center;
   align-self: center;
-  padding: 6px 15px 6px 8px;
+  padding: 4px 15px 4px 8px;
   border-radius: 0 2px 2px 0;
   position: relative;
   margin-left: 16px;
@@ -713,9 +752,9 @@ button.submit {
   content: "\EA0C";
   position: absolute;
   top: 0;
-  left: -12px;
+  left: -10px;
   color: #323232;
-  font-size: 1.86em;
+  font-size: 1.58em;
 }
 
 .tag.category {
@@ -727,7 +766,7 @@ button.submit {
   position: absolute;
   border: 5px solid;
   border-radius: 100%;
-  top: 8px;
+  top: 25%;
   left: 2px;
 }
 
@@ -901,6 +940,18 @@ button.submit {
   color: #FFFFFF;
 }
 
+.filter-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.filter-groups {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: baseline;
+  align-items: baseline;
+}
+
 .faqs h2.size-3 {
   margin-bottom: 20px;
 }
@@ -1051,6 +1102,10 @@ ul.categories li:not(:last-of-type) {
   border-right: 1px solid #616161;
 }
 
+ul.categories li a {
+  display: block;
+}
+
 ul.categories li i {
   margin-bottom: 24px;
   display: block;
@@ -1156,6 +1211,79 @@ ul.categories li i {
 .about-us textarea {
   width: 80%;
   height: 138px;
+}
+
+.content .inner-content.overview {
+  margin-top: 33px;
+}
+
+.overview h1 {
+  padding-top: 23px;
+}
+
+.overview .filter {
+  padding: 14px 0 14px 60px;
+}
+
+.overview .filter .title {
+  font-weight: bold;
+  font-size: calc(14px + 1px);
+  text-transform: none;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.overview .filter .title:after {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons', serif !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\EA0D";
+  position: absolute;
+  font-size: 14px;
+  right: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  right: initial;
+  font-size: 10px;
+  top: 4px;
+  margin-left: 10px;
+  color: #9a9a9a;
+}
+
+.overview .filter .filter-content {
+  max-height: 0;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+  padding-left: 63px;
+}
+
+.overview .filter.opened .title:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+}
+
+.overview .filter.opened .filter-content {
+  max-height: 160px;
+  -webkit-transition: max-height 0.2s ease-in;
+  transition: max-height 0.2s ease-in;
 }
 
 /* Buckets */

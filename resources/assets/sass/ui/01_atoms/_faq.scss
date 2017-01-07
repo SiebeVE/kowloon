@@ -12,13 +12,7 @@
     cursor: pointer;
     &:after
     {
-      @include icon();
-      @include icon-arrow();
-      position: absolute;
-      font-size: 14px;
-      right: 0;
-      transform: rotate(0deg);
-      transition: transform $transition-time ease-out;
+      @include arrow();
     }
     font-family: $font-family-sans-serif;
     font-weight: bold;
@@ -45,8 +39,7 @@
     }
     .faq-title:after
     {
-      transform: rotate(90deg);
-      transition: transform $transition-time ease-in;
+      @include arrow-open();
     }
   }
 }

@@ -5,7 +5,7 @@
   color: $text-color-second;
   background-color: $tag-background-color;
   align-self: center;
-  padding: 6px 15px 6px 8px;
+  padding: 4px 15px 4px 8px;
   border-radius: 0 2px 2px 0;
   position: relative;
   margin-left: 16px;
@@ -15,9 +15,9 @@
     @include icon-tag-front();
     position: absolute;
     top: 0;
-    left: -12px;
+    left: -10px;
     color: $tag-background-color;
-    font-size: 1.86em;
+    font-size: 1.58em;
   }
   &.category
   {
@@ -28,7 +28,7 @@
       position: absolute;
       border: 5px solid;
       border-radius: 100%;
-      top: 8px;
+      top: 25%;
       left: 2px;
       &.dog
       {
