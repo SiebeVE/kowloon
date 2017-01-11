@@ -1,0 +1,65 @@
+.inner-content.admin
+{
+  margin-top: 140px;
+  .localized
+  {
+    display: flex;
+    justify-content: space-between;
+    .localized-row
+    {
+      flex-grow: 1;
+      h3
+      {
+        text-align: center;
+        width: 100%;
+      }
+      .form-group
+      {
+        margin-left: 15px;
+      }
+    }
+    .localized-row:not(:last-of-type)
+    {
+      border-right: 1px solid $product-border-color;
+    }
+  }
+  &.center
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  span.help-block
+  {
+    display: block;
+  }
+  .has-error
+  {
+    color: red;
+  }
+  h2
+  {
+    font-size: 35px;
+    font-weight: bold;
+  }
+  h3
+  {
+    font-size: 26px;
+  }
+  h2, article
+  {
+    margin-bottom: 15px;
+  }
+  &.dashboard
+  {
+    a
+    {
+      display: block;
+      i
+      {
+        font-size: 20px;
+        margin-right: 5px;
+      }
+    }
+  }
+}

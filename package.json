@@ -30,6 +30,7 @@
   "dependencies": {
     "laravel-elixir-browsersync-official": "^1.0.0",
     "nouislider": "^9.1.0",
-    "slick-carousel": "^1.6.0"
+    "slick-carousel": "^1.6.0",
+    "toastr": "^2.1.2"
   }
 }

@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Kowloon',
 
     /*
     |--------------------------------------------------------------------------
@@ -181,6 +181,9 @@ return [
 	    Barryvdh\Debugbar\ServiceProvider::class,
 	    Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
 	    Dimsav\Translatable\TranslatableServiceProvider::class,
+	    Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
+	    Cviebrock\EloquentSluggable\ServiceProvider::class,
+	    Orangehill\Iseed\IseedServiceProvider::class
     ],
 
     /*

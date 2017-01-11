@@ -64,7 +64,8 @@
     @include reset-list();
     padding-top: 20px;
     &.help,
-    &.contact
+    &.contact,
+    &.language_bar_chooser
     {
       color: #A2A2A2;
     }

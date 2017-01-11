@@ -19,28 +19,44 @@
 		<div class="hamburger" id="menu-toggle">
 			<i class="icon-menu"></i>
 		</div>
+		<ul class="language_bar_chooser">
+			@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+				<li>
+					<a rel="alternate" hreflang="{{$localeCode}}"
+					   href="{{LaravelLocalization::getLocalizedURL($localeCode) }}">
+						<i class="flag-icon flag-icon-{{getCountry( $properties["regional"])}}"></i>
+						{{ $properties['native'] }}
+					</a>
+				</li>
+			@endforeach
+		</ul>
 		<ul class="help">
-			<li><a href="#"><i class="icon-search"></i>Search</a></li>
-			<li><a href="#"><i class="icon-question-mark"></i>FAQ</a></li>
+			<li><a href="#"><i class="icon-search"></i>{{getTranslatedContent("menu-search")}}</a></li>
+			<li><a href="#"><i class="icon-question-mark"></i>{{getTranslatedContent("menu-faq")}}</a></li>
 		</ul>
 		<ul class="contact">
-			<li><a href="{{route('about-us')}}"><i class="icon-contact"></i>Contact</a></li>
+			<li><a href="{{localizedUrl('about-us')}}"><i
+							class="icon-contact"></i>{{getTranslatedContent("menu-contact")}}</a></li>
 		</ul>
 		<ul class="links">
-			<li class="dog-hover"><a href="{{route('category', 'dog')}}"><i class="icon-dog"></i>Dogs</a></li>
-			<li class="cat-hover"><a href="{{route('category', 'cat')}}"><i class="icon-cat"></i>Cats</a></li>
-			<li class="fish-hover"><a href="{{route('category', 'fish')}}"><i class="icon-fish"></i>Fish</a></li>
-			<li class="bird-hover"><a href="{{route('category', 'bird')}}"><i class="icon-bird"></i>Birds</a></li>
-			<li class="hamster-hover"><a href="{{route('category', 'small-animals')}}"><i class="icon-hamster"></i>Small animals</a></li>
-			<li class="other-hover"><a href="{{route('category', 'other')}}"><i class="icon-other"></i>Other</a></li>
+			@foreach($categories as $category)
+				<li class="{{$category->css}}-hover"><a href="{{localizedUrl('category', $category->slug)}}"><i
+								class="icon-{{$category->css}}"></i>{{$category->name}}</a></li>
+			@endforeach
 		</ul>
 		<div class="footer choplin">
-			<a id="kowloon-menu-footer" href="{{ route('home') }}">Kowloon</a>
+			<a id="kowloon-menu-footer" href="{{ localizedUrl('home') }}">Kowloon</a>
 		</div>
 	</nav>
 	<div class="content">
 		@yield('content')
 	</div>
+	@if (session()->has('messageToastr'))
+		<div class="hidden" id="messageToastr" data-style="{{ session('messageToastr')["style"] }}">
+			<span class="title">{{ session('messageToastr')["title"] }}</span>
+			<span class="content">{!! session('messageToastr')["content"] !!}</span>
+		</div>
+	@endif
 </div>
 
 <!-- Scripts -->

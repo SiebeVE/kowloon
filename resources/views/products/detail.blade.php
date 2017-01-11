@@ -149,6 +149,7 @@
 			</article>
 			<article class="product-item multiple">
 				<div class="product-image">
+					<span class="count">4</span>
 					<div class="overlay dog-bg">
 						<div class="vertical-align">
 							<i class="icon icon-info"></i>
@@ -164,6 +165,7 @@
 			</article>
 			<article class="product-item multiple">
 				<div class="product-image">
+					<span class="count">4</span>
 					<div class="overlay dog-bg">
 						<div class="vertical-align">
 							<i class="icon icon-info"></i>
@@ -215,21 +217,6 @@
 					amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
 			</article>
 		</section>
-		<div class="banner">
-			<div class="exclusive">
-				<p class="deals-first-read">discover amazing Kowloon deals!</p>
-				<p class="deals-second-read">only in our newsletter</p>
-			</div>
-			<div class="email">
-				<p class="size-3">Subscribe to our newsletter</p>
-				<p class="text-helper">Lorum ipsum dolor sit amet.</p>
-				<form>
-					<label class="inline-button">
-						<input name="email" type="email" placeholder="name@domain.com">
-						<button class="inline" type="submit">Ok</button>
-					</label>
-				</form>
-			</div>
-		</div>
+		@include('partials.banner')
 	</div>
 @endsection

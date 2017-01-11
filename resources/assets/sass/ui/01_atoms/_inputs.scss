@@ -50,6 +50,25 @@ textarea
   padding: $input-padding;
 }
 
+input[type=checkbox]
+{
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $input-filter-checkbox-background;
+  border: $input-border-size solid $input-border-color;
+  display: inline-block;
+  position: relative;
+  width: $input-filter-checkbox-size;
+  height: $input-filter-checkbox-size;
+  padding: 0;
+  margin: 0;
+  &:checked
+  {
+    background-color: $body-background;
+    box-shadow: inset 0 0 0 $input-border-size $input-filter-checkbox-background;
+  }
+}
+
 .filter
 {
   .filter-group
@@ -61,24 +80,6 @@ textarea
       display: inline-block;
       font-size: $label-font-size;
       margin: 0 20px 0 10px;
-    }
-    input[type=checkbox]
-    {
-      -webkit-appearance: none;
-      appearance: none;
-      background-color: $input-filter-checkbox-background;
-      border: $input-border-size solid $input-border-color;
-      display: inline-block;
-      position: relative;
-      width: $input-filter-checkbox-size;
-      height: $input-filter-checkbox-size;
-      padding: 0;
-      margin: 0;
-      &:checked
-      {
-        background-color: $body-background;
-        box-shadow: inset 0 0 0 $input-border-size $input-filter-checkbox-background;
-      }
     }
   }
 

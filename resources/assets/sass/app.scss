@@ -3,9 +3,12 @@
 
 // Slider
 @import "node_modules/nouislider/distribute/nouislider";
+@import 'node_modules/toastr/toastr';
 
 // Bootstrap
 @import "plugins/bootstrap";
+@import "plugins/font-awesome";
+@import "plugins/flag-icon";
 
 /* Helpers */
 @import "helpers/variable-colors";
@@ -52,6 +55,5 @@
 @import "ui/03_organisms/product-overview";
 @import "ui/03_organisms/product-detail";
 
-
 /* Buckets */
-//@import "ui/04_buckets/**/*";
+@import "ui/04_buckets/_admin";
