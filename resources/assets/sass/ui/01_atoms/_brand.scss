@@ -57,3 +57,63 @@
 {
   @include brand("other");
 }
+
+.dog-bg
+{
+  @include brand-bg("dog");
+}
+
+.cat-bg
+{
+  @include brand-bg("cat");
+}
+
+.fish-bg
+{
+  @include brand-bg("fish");
+}
+
+.bird-bg
+{
+  @include brand-bg("bird");
+}
+
+.hamster-bg
+{
+  @include brand-bg("hamster");
+}
+
+.other-bg
+{
+  @include brand-bg("other");
+}
+
+.dog-bg-hover:hover
+{
+  @include brand-bg("dog");
+}
+
+.cat-bg-hover:hover
+{
+  @include brand-bg("cat");
+}
+
+.fish-bg-hover:hover
+{
+  @include brand-bg("fish");
+}
+
+.bird-bg-hover:hover
+{
+  @include brand-bg("bird");
+}
+
+.hamster-bg-hover:hover
+{
+  @include brand-bg("hamster");
+}
+
+.other-bg-hover:hover
+{
+  @include brand-bg("other");
+}

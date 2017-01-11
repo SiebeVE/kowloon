@@ -10,6 +10,12 @@
   padding: 0;
 }
 
+@mixin vertical-align(){
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+}
+
 @mixin text-fix() {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -44,6 +50,10 @@
 
 @mixin brand($type) {
   @extend %color-#{$type};
+}
+
+@mixin brand-bg($type) {
+  @extend %color-bg-#{$type};
 }
 
 @mixin arrow() {

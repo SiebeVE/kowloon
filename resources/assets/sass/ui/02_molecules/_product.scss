@@ -1,22 +1,158 @@
 .products
 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  @include clearfix();
   article
   {
+    float: left;
     border: 1px solid $product-border-color;
     background-color: $product-background;
     height: $product-height;
     padding: 5px;
-    &:not(:last-of-type)
+    position: relative;
+    width: calc(25% - 6px);
+    display: inline-block;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    &:nth-child(4n-1).hot-product + article
     {
-      margin-right: 6px;
+      margin-top: calc(-#{$product-height} - 6px);
     }
-    img
+    &:nth-child(4n-1).hot-product + article + article
     {
-      display: block;
-      width: 100%;
+      margin-top: calc(-#{$product-height} - 6px);
+      margin-left: calc(25%);
+      &.multiple
+      {
+        margin-top: calc(-#{$product-height} + 10px);
+      }
+    }
+    &.hot-product
+    {
+      height: calc(#{$product-height} * 2 + 12px);
+      width: calc(50% - 6px);
+      img
+      {
+        height: 250px;
+      }
+      .product-description
+      {
+        span
+        {
+          padding-bottom: 5px;
+        }
+        .product-item-title
+        {
+          float: none;
+          display: block;
+          font-size: 26px;
+        }
+        .product-item-description
+        {
+          display: block;
+          line-height: 1;
+          font-size: $font-size-text;
+        }
+        .product-item-price
+        {
+          position: absolute;
+          bottom: 7px;
+          left: 10px;
+        }
+        .button-hot-product
+        {
+          position: absolute;
+          right: 2px;
+          bottom: 2px;
+        }
+      }
+    }
+    &.multiple
+    {
+      position: relative;
+      width: calc(25% - 20px);
+      height: calc(#{$product-height} - 16px);
+      background-color: rgb(86, 86, 86);
+      margin-right: 20px;
+      margin-top: 14px;
+      .product-image
+      {
+        overflow: hidden;
+        img
+        {
+          height: auto;
+          width: 222px;
+          margin-top: -14px;
+        }
+      }
+      &:after
+      {
+        width: 90%;
+        height: calc(100% + 16px);
+        content: "";
+        display: block;
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        border-top: 5px solid rgb(154, 154, 154);
+        border-right: 5px solid rgb(154, 154, 154);
+      }
+      &:before
+      {
+        width: 95%;
+        height: calc(100% + 9px);
+        content: "";
+        display: block;
+        position: absolute;
+        right: -8px;
+        top: -8px;
+        border-top: 5px solid rgb(182, 182, 182);
+        border-right: 5px solid rgb(182, 182, 182);
+      }
+    }
+    .product-image
+    {
+      position: relative;
+      img
+      {
+        display: block;
+        width: 100%;
+      }
+      .overlay
+      {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        transition: .2s;
+        .icon
+        {
+          font-size: 52px;
+          display: block;
+          margin-bottom: 12px;
+        }
+        span
+        {
+          font-size: $font-size-menu;
+        }
+      }
+    }
+    &:hover
+    {
+      .overlay
+      {
+        opacity: .86;
+      }
+    }
+    .colors
+    {
+      position: absolute;
+      @include clearfix();
+      span
+      {
+        margin: 10px -2px 0 10px;
+        float: left;
+      }
     }
     .product-description
     {

@@ -26,6 +26,7 @@ $font-size-text: 14px;
 $font-size-3: 20px;
 $line-height-text: 22px;
 $line-height-base: 1.8;
+$text-color-third: #454545;
 $text-color-second: #CECECE;
 $text-color: #FFFFFF;
 
@@ -77,7 +78,7 @@ $banner-font-size-first-read: 44px;
 $banner-font-size-second-read: 20px;
 
 // Product
-$product-height: 200px;
+$product-height: 201px;
 $product-background: lighten($body-background, 6.5%);
 $product-border-color: lighten($product-background, 10.75%);
 
@@ -90,7 +91,14 @@ $input-padding: 12px;
 $input-width: 255px;
 $input-filter-checkbox-size: 19px;
 $input-filter-checkbox-background: #FFFFFF;
-
+$slider-outer-connect-color: $navbar-default-bg;
+$slider-connect-color: $input-border-color;
+$slider-width: 390px;
+$price-input-width: 150px;
+$dropdown-select-color: lighten($body-background, 11%);
+$dropdown-text-select-color: $text-color-second;
+$dropdown-height: 30px;
+$dropdown-width: 175px;
 
 // Button
 $button-inline-width: 45px;

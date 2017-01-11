@@ -92,6 +92,14 @@
   content: "\EA0D"
 }
 
+.icon-double-arrow:before {
+  content: "\EA0E"
+}
+
+.icon-info:before {
+  content: "\EA0F"
+}
+
 /*
  * Media Queries */
 @mixin icon() {
@@ -159,4 +167,12 @@
 
 @mixin icon-arrow() {
   content: "\EA0D"
+}
+
+@mixin icon-double-arrow() {
+  content: "\EA0E"
+}
+
+@mixin icon-info() {
+  content: "\EA0F"
 }

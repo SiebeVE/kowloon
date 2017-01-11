@@ -14,7 +14,7 @@
   }
   .filter
   {
-    padding: 14px 0 14px 60px;
+    padding: 14px 0;
     .title
     {
       font-weight: bold;
@@ -39,6 +39,10 @@
       transition: max-height $transition-time ease-out;
       overflow: hidden;
       padding-left: 63px;
+      .by-collection
+      {
+        padding-bottom: 25px;
+      }
     }
     &.opened
     {
@@ -48,9 +52,15 @@
       }
       .filter-content
       {
-        max-height: 160px;
+        max-height: 175px;
+        padding-bottom: 6px;
         transition: max-height $transition-time ease-in;
       }
     }
+  }
+  .products-overview
+  {
+    border-top: 1px solid $dropdown-select-color;
+    padding-top: 10px;
   }
 }

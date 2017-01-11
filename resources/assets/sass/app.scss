@@ -1,6 +1,9 @@
 // Variables
 @import "variables";
 
+// Slider
+@import "node_modules/nouislider/distribute/nouislider";
+
 // Bootstrap
 @import "plugins/bootstrap";
 
@@ -26,7 +29,10 @@
 @import "ui/01_atoms/buttons";
 @import "ui/01_atoms/tag";
 @import "ui/01_atoms/faq";
-
+@import "ui/01_atoms/slider";
+@import "ui/01_atoms/slick-slider";
+@import "ui/01_atoms/product-color";
+@import "ui/01_atoms/specification";
 
 /* Molecules */
 @import "ui/02_molecules/product";
@@ -34,7 +40,8 @@
 @import "ui/02_molecules/tags";
 @import "ui/02_molecules/filter";
 @import "ui/02_molecules/faqs";
-
+@import "ui/02_molecules/price";
+@import "ui/02_molecules/product-detail";
 
 /* Organisms */
 @import "ui/03_organisms/menu";
@@ -43,6 +50,7 @@
 @import "ui/03_organisms/banner";
 @import "ui/03_organisms/about-us";
 @import "ui/03_organisms/product-overview";
+@import "ui/03_organisms/product-detail";
 
 
 /* Buckets */

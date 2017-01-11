@@ -2,18 +2,23 @@
 {
   @include clearfix();
   margin-top: 15px;
-  h2{
+  h2
+  {
     color: #FFFFFF;
     line-height: $line-height-base;
   }
   .link-store
   {
-    float: right;
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: none;
-    text-decoration: underline;
-    line-height: 1;
     margin: 22px 0 34px;
   }
+}
+
+.link-store
+{
+  float: right;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: none;
+  text-decoration: underline;
+  line-height: 1;
 }

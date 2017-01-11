@@ -28,5 +28,23 @@ button
     padding: 11.5px 0;
     background-color: $brand-dog;
     line-height: 1;
+    transition: .2s;
+    &:hover
+    {
+      background-color: darken($brand-dog, 16);
+    }
+  }
+}
+
+.button-hot-product
+{
+  font-size: $font-size-text;
+  font-weight: bold;
+  background-color: $brand-dog;
+  transition: .2s;
+  padding: 5px 8px;
+  &:hover
+  {
+    background-color: darken($brand-dog, 16);
   }
 }

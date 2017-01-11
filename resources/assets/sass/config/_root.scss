@@ -28,10 +28,18 @@ body
   @include text-fix();
 }
 
+.vertical-align
+{
+  @include vertical-align();
+}
+
 input:focus,
 select:focus,
 textarea:focus,
-button:focus {
+button:focus,
+.dropdown:focus,
+.slick-slide:focus
+{
   outline: none;
 }
 
