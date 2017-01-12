@@ -18,6 +18,12 @@ html, body
   position: relative;
 }
 
+.hidden
+{
+  display: none;
+  opacity: 0;
+}
+
 body
 {
   color: $text-color;
@@ -50,7 +56,7 @@ a
   font-size: inherit;
 }
 
-.content
+div.content
 {
   margin-left: $menu-width;
   margin-bottom: $content-bottom-margin;

@@ -31,9 +31,9 @@
 			{{--<li><a href="{{route('about-us')}}"><i class="icon-contact"></i>Contact</a></li>--}}
 		{{--</ul>--}}
 		<ul class="links">
-			<li class="dog-hover"><a href="{{route('category', 'dog')}}"><i class="fa fa-tags"></i>Tags</a></li>
-			<li class="dog-hover"><a href="{{route('category', 'dog')}}"><i class="fa fa-question-circle"></i>FAQ</a></li>
-			<li class="dog-hover"><a href="{{route('category', 'dog')}}"><i class="fa fa-shopping-cart"></i>Products</a></li>
+			<li class="dog-hover"><a href="{{route('admin-tag-view')}}"><i class="fa fa-tags"></i>Tags</a></li>
+			<li class="dog-hover"><a href="{{route('admin-faq-view')}}"><i class="fa fa-question-circle"></i>FAQ</a></li>
+			<li class="dog-hover"><a href="{{route('admin-product-view')}}"><i class="fa fa-shopping-cart"></i>Products</a></li>
 		</ul>
 		<div class="footer choplin">
 			<a id="kowloon-menu-footer" href="{{ route('home') }}">Kowloon</a>

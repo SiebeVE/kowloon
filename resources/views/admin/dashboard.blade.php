@@ -8,17 +8,17 @@
 			<article>
 				<h3>Tags</h3>
 				<a href="{{route('admin-tag-create')}}"><i class="fa fa-plus-circle"></i>Create a new tag</a>
-{{--				<a href="{{route('admin-tag-view')}}"><i class="fa fa-eye"></i>View current tags()</a>--}}
+				<a href="{{route('admin-tag-view')}}"><i class="fa fa-eye"></i>View current tags ({{$tag}})</a>
 			</article>
 			<article>
 				<h3>FAQ</h3>
-				{{--<a href="{{route('admin-faq-create')}}"><i class="fa fa-plus-circle"></i>Create a new FAQ</a>--}}
-				{{--<a href="{{route('admin-faq-view')}}"><i class="fa fa-eye"></i>View current faqs()</a>--}}
+				<a href="{{route('admin-faq-create')}}"><i class="fa fa-plus-circle"></i>Create a new FAQ</a>
+				<a href="{{route('admin-faq-view')}}"><i class="fa fa-eye"></i>View current faqs({{$faq}})</a>
 			</article>
 			<article>
 				<h3>Products</h3>
-				{{--<a href="{{route('admin-product-create')}}"><i class="fa fa-plus-circle"></i>Create a new product</a>--}}
-				{{--<a href="{{route('admin-product-view')}}"><i class="fa fa-eye"></i>View current products()</a>--}}
+				<a href="{{route('admin-product-create')}}"><i class="fa fa-plus-circle"></i>Create a new product</a>
+				<a href="{{route('admin-product-view')}}"><i class="fa fa-eye"></i>View current products({{$product}})</a>
 			</article>
 		</section>
 	</div>

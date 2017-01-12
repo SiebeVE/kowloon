@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Faq;
+use App\Product;
+use App\Tag;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller {
@@ -20,6 +23,13 @@ class AdminController extends Controller {
 	}
 
 	public function getDashboard() {
-		return view( 'admin.dashboard' );
+		$tags = Tag::count();
+		$faqs = Faq::count();
+		$products = Product::count();
+		return view( 'admin.dashboard',[
+			"tag" => $tags,
+			"faq" => $faqs,
+			"product" => $products,
+		] );
 	}
 }

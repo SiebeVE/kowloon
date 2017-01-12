@@ -23,7 +23,13 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+	    Route::bind('tag', function($value) {
+		    return \App\Tag::whereTranslation('slug', $value)->first();
+	    });
+
+	    Route::bind('faq', function($value) {
+		    return \App\Faq::whereTranslation('slug', $value)->first();
+	    });
 
         parent::boot();
     }

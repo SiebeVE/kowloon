@@ -8,10 +8,10 @@ $tr = new TranslateClient();
 	<h1 class="title-with-heart">Kowloon</h1>
 	<div class="inner-content admin">
 		<section>
-			<h2>{{isset($tag) ? "Edit" : "Create"}} tag</h2>
+			<h2>Are you sure you want to delete this tag?</h2>
 			<a href="{{route('admin-tag-view')}}"><i class="fa fa-eye link-in-icon"></i>View all current tags</a>
 			<form class="locale" role="form" method="post"
-				  action="{{isset($tag) ? route('admin-tag-edit', $tag->slug) : route('admin-tag-create')}}">
+				  action="{{route('admin-tag-delete', $tag->slug)}}">
 				{{csrf_field()}}
 				<div class="localized">
 					@foreach(getSupportedLocales() as $localeCode => $properties)
@@ -27,22 +27,13 @@ $tr = new TranslateClient();
 								<label for="name-{{$localeCode}}">{{$tr->translate('Name')}}</label>
 								
 								<div class="col-md-6">
-									<input id="name-{{$localeCode}}" type="text" class="form-control"
-										   name="name-{{$localeCode}}"
-										   value="{{ $errors->has('name-'.$localeCode) ? old('name-'.$localeCode) : (isset($tag) ? $tag->{'name:'.$localeCode} : '') }}"
-										   required>
-									
-									@if ($errors->has('name-'.$localeCode))
-										<span class="help-block">
-                                        <strong>{{ $errors->first('name-'.$localeCode) }}</strong>
-                                    </span>
-									@endif
+									<p>{{ $tag->{'name:'.$localeCode} }}</p>
 								</div>
 							</div>
 						</div>
 					@endforeach
 				</div>
-				<button type="submit" class="submit">{{isset($tag) ? "Edit" : "Add"}} tag</button>
+				<button type="submit" class="submit">Delete tag</button>
 			</form>
 		</section>
 	</div>

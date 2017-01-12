@@ -36,6 +36,10 @@ function getCountry( $input ) {
 	return strtolower( explode( "_", $input )[1] );
 }
 
+function getSupportedLocales(){
+	return LaravelLocalization::getSupportedLocales();
+}
+
 function flashToastr( $style, $title, $content ) {
 	$stringyContent = $content;
 	if ( is_array( $content ) ) {
