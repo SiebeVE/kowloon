@@ -22,22 +22,6 @@
 								<label for="{{$tag->slug}}">{{ $tag->name }}</label>
 							</div>
 						@endforeach
-						<div class="filter-group">
-							<input id="luxury" type="checkbox">
-							<label for="luxury">Luxury</label>
-						</div>
-						<div class="filter-group">
-							<input id="new" type="checkbox">
-							<label for="new">new</label>
-						</div>
-						<div class="filter-group">
-							<input id="on-sale" type="checkbox">
-							<label for="on-sale">on sale</label>
-						</div>
-						<div class="filter-group">
-							<input id="other" type="checkbox">
-							<label for="other">other</label>
-						</div>
 					</div>
 				</div>
 				<div class="price">

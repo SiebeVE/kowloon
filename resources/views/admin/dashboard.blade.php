@@ -51,8 +51,7 @@
 				<h3>Products</h3>
 				<a href="{{route('admin-product-create')}}"><i class="fa fa-plus-circle"></i>Create a new product</a>
 				<a href="{{route('admin-product-view')}}"><i class="fa fa-eye"></i>View current
-					products({{$productCount}}
-					)</a>
+					products({{$productCount}})</a>
 			</article>
 		</section>
 	</div>

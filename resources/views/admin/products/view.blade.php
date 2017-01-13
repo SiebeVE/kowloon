@@ -36,7 +36,7 @@
 						@endforeach
 					</div>
 				@empty
-					<p>Crap no tags yet...</p>
+					<p>Crap no products yet...</p>
 				@endforelse
 			</div>
 		</section>
