@@ -11,6 +11,8 @@ class Product extends Model implements HasMedia {
 	use Translatable;
 	use HasMediaTrait;
 
+	protected $fillable = ["colors"];
+
 	public $translatedAttributes = [ 'name', 'slug', 'description' ];
 	protected $appends = [ 'faq_ids', 'tag_ids' ];
 
@@ -23,7 +25,11 @@ class Product extends Model implements HasMedia {
 	}
 
 	public function setColorsAttribute( $value ) {
-		$this->colors = serialize( $value );
+		$this->attributes['colors'] = serialize( $value );
+	}
+
+	public function getPriceAttribute($value) {
+		return number_format((float)$value, 2, ',', '');
 	}
 
 	public function getColorsAttribute($value) {

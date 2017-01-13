@@ -6,9 +6,6 @@
 	cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
 		window.location = "/admin";
 	});
-	cheet('f2 f4', function () {
-		window.location = "/admin";
-	});
 	
 	$("#kowloon-menu-footer").lettering();
 	

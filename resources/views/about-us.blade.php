@@ -8,21 +8,18 @@
 	<div class="inner-content about-us">
 		<div class="tags">
 			<div class="tag">
-				about us
+				{{strtolower(getTranslatedContent('about-us-title'))}}
 			</div>
 		</div>
-		<h1 class="bold size-1">About us</h1>
+		<h1 class="bold size-1">{{getTranslatedContent('about-us-title')}}</h1>
 		<section class="info-contact">
 			<article class="info">
 				<h2 class="bold size-3">Kowloon</h2>
-				<p>Pet Concept, active since 1998, is developing, importing and exporting products for pets
-					worldwide.</p>
-				<p>natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-					illo
-					inventore veritatis et quasi architecto beatae vitae sequi nesciunt.</p>
+				<p>{{getTranslatedContent('about-us-first-read')}}</p>
+				<p>{{getTranslatedContent('about-us-second-read')}}</p>
 			</article>
 			<article class="contact">
-				<h2 class="bold size-3">Contact</h2>
+				<h2 class="bold size-3">{{getTranslatedContent('about-us-contact')}}</h2>
 				<ul>
 					<li>Deckx Johan</li>
 					<li>Bosdreef 7</li>
@@ -31,37 +28,42 @@
 			</article>
 		</section>
 		<section>
-			<h2 class="bold size-3">Leave us a message</h2>
-			<form>
-				<div class="form-group">
+			<h2 class="bold size-3">{{getTranslatedContent('about-us-form-title')}}</h2>
+			<form method="post">
+				{{csrf_field()}}
+				<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 					<label for="email">E-mail</label>
-					<input type="email" id="email" name="email" placeholder="name@domain.com">
+					<input type="email" id="email" name="email" required
+						   placeholder="{{getTranslatedContent('banner-email')}}"
+						   value="{{$errors->has('email') ? old('email') : ""}}">
+					@if ($errors->has('email'))
+						<p class="help-block">
+							<strong>{{ $errors->first('email') }}</strong>
+						</p>
+					@endif
 				</div>
-				<div class="form-group">
-					<label for="message">Your message</label>
-					<textarea id="message" name="message" placeholder="Write your message here"></textarea>
+				<div class="form-group{{ $errors->has('message') ? ' has-error' : '' }}">
+					<label for="message">{{getTranslatedContent('about-us-message-title')}}</label>
+					<textarea id="message" name="message"
+							  placeholder="{{getTranslatedContent('about-us-message-placeholder')}}"
+							  required>{{$errors->has('message') ? old('message') : ""}}</textarea>
+					@if ($errors->has('message'))
+						<p class="help-block">
+							<strong>{{ $errors->first('message') }}</strong>
+						</p>
+					@endif
 				</div>
-				<button type="submit" class="submit">Send</button>
+				<button type="submit" class="submit">{{getTranslatedContent('about-us-submit-button')}}</button>
 			</form>
 		</section>
 		<section class="faqs">
-			<h2 class="bold size-3">Frequently asked questions</h2>
-			<article class="faq">
-				<h3 class="faq-title">Dit is een vraag</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur
-					adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit
-					amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
-			</article>
-			<article class="faq opened">
-				<h3 class="faq-title">Dit is een vraag</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur
-					adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit
-					amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur
-					adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit
-					amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur
-					adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit
-					amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
-			</article>
+			<h2 class="bold size-3">{{getTranslatedContent('faq-title')}}</h2>
+			@foreach($faqs as $faq)
+				<article class="faq">
+					<h3 class="faq-title">{{$faq->question}}</h3>
+					<p>{{$faq->answer}}</p>
+				</article>
+			@endforeach
 		</section>
 	</div>
 @endsection

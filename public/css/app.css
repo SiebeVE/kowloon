@@ -6534,6 +6534,10 @@ html, body {
   position: relative;
 }
 
+.has-error {
+  color: red;
+}
+
 .hidden {
   display: none;
   opacity: 0;
@@ -6836,7 +6840,7 @@ input[type=file]#images + label {
   -webkit-box-direction: normal;
   flex-direction: column;
   position: relative;
-  width: 175px;
+  width: 234px;
   height: 30px;
   cursor: pointer;
 }
@@ -7892,6 +7896,10 @@ ul.categories li i {
   display: -webkit-box;
   display: flex;
   padding-top: 35px;
+}
+
+.about-us .info-contact .info {
+  width: 720px;
 }
 
 .about-us .info-contact .contact {

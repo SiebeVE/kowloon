@@ -8,6 +8,7 @@ use App\Product;
 use App\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class ProductController extends BaseController {
 	public function __construct() {
@@ -15,12 +16,31 @@ class ProductController extends BaseController {
 		parent::__construct();
 	}
 
-	public function getProductOverview( $category ) {
-		return view( 'products.overview' );
+	public function getProductOverview( Category $category ) {
+		$tagsOfProducts = $category->tags( $category->id );
+		$productsTotal  = $category->products;
+
+		$products = $productsTotal;
+
+		return view( 'products.overview', [
+			"category"    => $category,
+			"productList" => $products,
+			"counting"    => [
+				"total"    => count( $productsTotal ),
+				"filtered" => count( $products ),
+			],
+			"tags"        => $tagsOfProducts,
+		] );
 	}
 
-	public function getProductDetail( $category, Product $product ) {
-		return view( 'products.detail' );
+	public function getProductDetail( Category $category, Product $product ) {
+		$relatedProducts = Product::where( 'id', '!=', $product->id )->inRandomOrder()->take( 4 )->get();
+
+		return view( 'products.detail', [
+			"category" => $category,
+			"product"  => $product,
+			"related"  => $relatedProducts,
+		] );
 	}
 
 	public function getProductsCreate() {

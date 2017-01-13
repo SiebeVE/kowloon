@@ -18,6 +18,11 @@ html, body
   position: relative;
 }
 
+.has-error
+{
+  color: red;
+}
+
 .hidden
 {
   display: none;

@@ -74,7 +74,7 @@ $tr = new TranslateClient();
 						<div class="col-md-6">
 							<label><input id="price" type="number" class="form-control"
 										  name="price" min="0" step="any"
-										  value="{{ $errors->has('price') ? old('price') : (isset($product) ? $product->price : '') }}"
+										  value="{{ $errors->has('price') ? old('price') : (isset($product) ? str_replace(',', '.', $product->price) : '') }}"
 										  required></label>
 							
 							@if($errors->has('price'))
