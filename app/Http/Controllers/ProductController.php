@@ -158,6 +158,11 @@ class ProductController extends BaseController {
 	}
 
 	public function postProductsDelete( Request $request, Product $product ) {
+		if ( $product->hot_item != 0 ) {
+			flashToastr( 'error', "Product is hot", "The product you want to delete is a hot item, first change this, then try again" );
+
+			return redirect()->route( 'admin-dashboard' );
+		}
 		$product->delete();
 		flashToastr( "success", "Product deleted", "The product has been successfully deleted!" );
 

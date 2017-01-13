@@ -8155,6 +8155,39 @@ div.content .inner-content.detail .faqs {
   margin-right: 5px;
 }
 
+.inner-content.admin.dashboard .hot-items {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.inner-content.admin.dashboard .hot-items label {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.inner-content.admin.dashboard .hot-items label:not(:first-of-type):not(:last-of-type) {
+  margin: 16px 5px 0;
+}
+
+.inner-content.admin.dashboard .hot-items label:first-of-type {
+  margin-right: 5px;
+}
+
+.inner-content.admin.dashboard .hot-items label:last-of-type {
+  margin-left: 5px;
+}
+
+.inner-content.admin.dashboard .hot-items label span {
+  display: block;
+}
+
+.inner-content.admin.dashboard .hot-items label select {
+  width: 100%;
+}
+
 .inner-content.admin .link-in-icon {
   font-size: 20px;
   margin-right: 5px;

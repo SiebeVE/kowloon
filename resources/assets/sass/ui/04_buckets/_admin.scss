@@ -64,6 +64,36 @@
         margin-right: 5px;
       }
     }
+    .hot-items
+    {
+      display: flex;
+      justify-content: space-between;
+      label
+      {
+        flex-grow: 1;
+        text-align: center;
+        &:not(:first-of-type):not(:last-of-type)
+        {
+          margin: 16px 5px 0;
+        }
+        &:first-of-type
+        {
+          margin-right: 5px;
+        }
+        &:last-of-type
+        {
+          margin-left: 5px;
+        }
+        span
+        {
+          display: block;
+        }
+        select
+        {
+          width: 100%;
+        }
+      }
+    }
   }
   .link-in-icon
   {

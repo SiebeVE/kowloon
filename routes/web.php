@@ -25,6 +25,7 @@ Route::group( [ 'prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 
 
 Route::group( [ 'prefix' => "admin" ], function () {
 	Route::get( '/', "AdminController@getDashboard" )->name( 'admin-dashboard' );
+	Route::post( '/', "AdminController@postDashboard" );
 
 	Route::get( '/login', "AdminController@getLogin" )->name( 'admin-login' );
 	Route::post( '/login', "Auth\\LoginController@login" );

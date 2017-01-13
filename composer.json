@@ -19,7 +19,8 @@
     "cviebrock/eloquent-sluggable": "^4.1",
     "orangehill/iseed": "^2.3",
     "stichoza/google-translate-php": "^3.2",
-    "codingo-me/dropzoner": "^1.0"
+    "codingo-me/dropzoner": "^1.0",
+    "doctrine/dbal": "^2.5"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
