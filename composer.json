@@ -18,7 +18,8 @@
     "spatie/laravel-migrate-fresh": "^1.2",
     "cviebrock/eloquent-sluggable": "^4.1",
     "orangehill/iseed": "^2.3",
-    "stichoza/google-translate-php": "^3.2"
+    "stichoza/google-translate-php": "^3.2",
+    "codingo-me/dropzoner": "^1.0"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",

@@ -28,6 +28,7 @@
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
+    "dropzone": "^4.3.0",
     "laravel-elixir-browsersync-official": "^1.0.0",
     "nouislider": "^9.1.0",
     "slick-carousel": "^1.6.0",

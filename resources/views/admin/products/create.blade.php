@@ -11,20 +11,101 @@ $tr = new TranslateClient();
 			<h2>{{isset($product) ? "Edit" : "Create"}} product</h2>
 			<a href="{{route('admin-product-view')}}"><i class="fa fa-eye link-in-icon"></i>View all current
 				products</a>
-			<form class="locale" role="form" method="post"
+			<form id="admin-product-create" class="locale" role="form" method="post"
+				  enctype="multipart/form-data"
 				  action="{{isset($product) ? route('admin-product-edit', $product->slug) : route('admin-product-create')}}">
 				{{csrf_field()}}
+				<div class="categories">
+					<h3 class="{{ $errors->has('category') ? 'has-error' : '' }}">Link category</h3>
+					<div class="categories-pick">
+						@foreach($categories as $category)
+							<input type="radio" value="{{$category->id}}" class="margin-right"
+								   name="category"
+								   id="category-{{$category->css}}" {{ isset($product) ? ($product->category_id == $category->id ? "checked" : "") : ($errors->has('category') ? (old(category) == $category->id ? "checked" : "") : "") }}>
+							<label for="category-{{$category->css}}" class="color-{{$category->css}}"><i
+										class="icon icon-{{$category->css}} margin-right"></i><span>{{ $category->{'name:en'} }}</span>
+							</label>
+						@endforeach
+						@if($errors->has('category'))
+							<span class="help-block">
+								<strong>{{ $errors->first('category') }}</strong>
+							</span>
+						@endif
+					</div>
+				</div>
+				<div class="tags-picker">
+					<h3>Link tags</h3>
+					<div class="tag-picker picker">
+						@foreach($tags as $tag)
+							<label><input type="checkbox" value="{{$tag->id}}" class="margin-right"
+										  {{ isset($product) ? ( in_array( $tag->id, $product->tag_ids ) ? "checked" : "") : "" }}
+										  name="tags[]">{{ $tag->{'name:en'} }}</label>
+						@endforeach
+					</div>
+				</div>
+				<div class="faqs-picker">
+					<h3>Link faqs</h3>
+					<div class="faq-picker picker">
+						@foreach($faqs as $faq)
+							<label><input type="checkbox" value="{{$faq->id}}" class="margin-right"
+										  {{ isset($product) ? (in_array( $faq->id, $product->faq_ids ) ? "checked" : "") : "" }}
+										  name="faqs[]">{{$faq->{'question:en'} }}</label>
+						@endforeach
+					</div>
+				</div>
 				<div class="images">
-					Here comes image upload
+					<h3>{{isset($product) ? "Edit" : "Add"}} pictures</h3>
+					<div class="examples-images">
+						@if(isset($product))
+							{{--{{dd($images)}}--}}
+							@foreach($product->getMedia() as $image)
+								<img src="{{ $image->getUrl() }}">
+							@endforeach
+						@endif
+					</div>
+					<input type="file" accept="image/*" id="images" name="images[]"
+						   data-multiple-caption="{count} files selected"
+						   multiple/>
+					<label for="images" class="submit"><span>Choose pictures</span></label>
+				</div>
+				<div class="price-input">
+					<h3>{{isset($product) ? "Edit" : "Add"}} price</h3>
+					<div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
+						<div class="col-md-6">
+							<label><input id="price" type="number" class="form-control"
+										  name="price" min="0" step="any"
+										  value="{{ $errors->has('price') ? old('price') : (isset($product) ? $product->price : '') }}"
+										  required></label>
+							
+							@if($errors->has('price'))
+								<span class="help-block">
+                                        <strong>{{ $errors->first('price') }}</strong>
+                                    </span>
+							@endif
+						</div>
+					</div>
 				</div>
 				<div class="colors">
-					Here comes color
-				</div>
-				<div class="tag-picker">
-					Here comes tag picker
-				</div>
-				<div class="faq-picker">
-					Here comes faq picker
+					<h3>{{isset($product) ? "Edit" : "Add"}} colors</h3>
+					<div id="colors">
+						@if(isset($product))
+							@foreach($product->colors as $color)
+								<div class="color-input">
+									<input type="text" name="colors[]" class="color" placeholder="#FFFFFF"
+										   value="{{$color}}">
+								</div>
+							@endforeach
+						@endif
+					</div>
+					<button type="button" class="add" data-append-id="colors" data-template-id="color-template">Add
+						color
+					</button>
+					<button type="button" class="remove" data-append-id="colors">Remove color</button>
+					<div class="hidden" id="color-template">
+						<div class="color-input">
+							<input disabled type="text" name="colors[]" class="color" placeholder="#FFFFFF">
+						</div>
+					</div>
 				</div>
 				<div class="localized">
 					@foreach(getSupportedLocales() as $localeCode => $properties)
@@ -64,22 +145,6 @@ $tr = new TranslateClient();
 									@if ($errors->has('description-'.$localeCode))
 										<span class="help-block">
                                         <strong>{{ $errors->first('description-'.$localeCode) }}</strong>
-                                    </span>
-									@endif
-								</div>
-							</div>
-							<div class="form-group{{ $errors->has('specifications-'.$localeCode) ? ' has-error' : '' }}">
-								<label for="specifications-{{$localeCode}}">{{$localeCode == "nl" ? "Specificaties" : "Specifications"}}</label>
-								
-								<div class="col-md-6">
-									<input id="specifications-{{$localeCode}}" type="text" class="form-control"
-										   name="specifications-{{$localeCode}}"
-										   value="{{ $errors->has('specifications-'.$localeCode) ? old('specifications-'.$localeCode) : (isset($product) ? $product->{'specifications:'.$localeCode} : '') }}"
-										   required>
-									
-									@if ($errors->has('specifications-'.$localeCode))
-										<span class="help-block">
-                                        <strong>{{ $errors->first('specifications-'.$localeCode) }}</strong>
                                     </span>
 									@endif
 								</div>

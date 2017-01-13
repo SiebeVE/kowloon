@@ -34,6 +34,36 @@ button
       background-color: darken($brand-dog, 16);
     }
   }
+  &.add
+   {
+     width: $button-width;
+     font-size: $button-font-size;
+     color: $button-font-color;
+     font-weight: normal;
+     padding: 11.5px 0;
+     background-color: $brand-fish;
+     line-height: 1;
+     transition: .2s;
+     &:hover
+     {
+       background-color: darken($brand-fish, 16);
+     }
+   }
+  &.remove
+  {
+    width: $button-width;
+    font-size: $button-font-size;
+    color: $button-font-color;
+    font-weight: normal;
+    padding: 11.5px 0;
+    background-color: $brand-small;
+    line-height: 1;
+    transition: .2s;
+    &:hover
+    {
+      background-color: darken($brand-small, 16);
+    }
+  }
 }
 
 .button-hot-product

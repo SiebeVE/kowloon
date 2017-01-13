@@ -10,4 +10,8 @@ class Category extends Model {
 
 	public $translatedAttributes = [ 'name', 'slug' ];
 
+	public function products() {
+		return $this->hasMany( 'App\Product' );
+	}
+
 }

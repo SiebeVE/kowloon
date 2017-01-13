@@ -97,7 +97,7 @@
   }
   .locale
   {
-    input
+    input:not(type[checkbox])
     {
       width: 100%;
     }
@@ -106,5 +106,124 @@
       width: 100%;
       height: 150px;
     }
+  }
+  .examples-images
+  {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -15px;
+    margin-right: -15px;
+    &:after
+    {
+      content: "";
+      flex: auto;
+    }
+    img
+    {
+      height: 150px;
+      margin-bottom: 15px;
+      margin-right: 15px;
+    }
+  }
+  .images,
+  .colors,
+  .price-input,
+  .faqs-picker,
+  .tags-picker,
+  .categories
+  {
+    margin-bottom: 25px;
+  }
+  .price-input
+  {
+    label
+    {
+      margin-top: 0;
+      position: relative;
+      input
+      {
+        width: 150px;
+        text-align: center;
+        padding-left: 19px;
+      }
+      &:before
+      {
+        font-family: "Arial", "Helvetica", sans-serif;
+        content: '€';
+        color: black;
+        font-size: 16px;
+        position: absolute;
+        text-align: right;
+        width: 22px;
+        padding-top: 8px;
+      }
+    }
+  }
+  .picker
+  {
+    display: flex;
+    flex-wrap: wrap;
+    &:after
+    {
+      content: "";
+      flex: auto;
+    }
+    label
+    {
+      display: inline-block;
+      margin-top: 0;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  .categories-pick
+  {
+    display: flex;
+    justify-content: space-between;
+    input[type=radio]
+    {
+      width: .1px;
+      height: .1px;
+      border: none;
+      &:not(:checked) + label
+      {
+        color: #FFFFFF;
+        opacity: .4;
+        transition: all $transition-time ease-in;
+      }
+      & + label
+      {
+        cursor: pointer;
+        display: inline;
+        opacity: 1;
+        transition: all $transition-time ease-out;
+        span
+        {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+  .colors
+  {
+    #colors
+    {
+      display: flex;
+      flex-wrap: wrap;
+      &:after
+      {
+        content: "";
+        flex: auto;
+      }
+      .color-input
+      {
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .margin-right
+  {
+    margin-right: 10px;
   }
 }

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d31399059b38286a11c2c6a3dac12685",
-    "content-hash": "52201333ee5a00f3b242b4c8a4aaa151",
+    "hash": "da324c6e8c6846d7bf0b6ee2567d742d",
+    "content-hash": "bd623787f65eb69e4b1dfbaf9921242c",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -308,6 +308,47 @@
                 "slugify"
             ],
             "time": "2016-08-09 20:10:17"
+        },
+        {
+            "name": "codingo-me/dropzoner",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codingo-me/dropzoner.git",
+                "reference": "c6660d70d66b82dc672b814aeb33479d0e358730"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codingo-me/dropzoner/zipball/c6660d70d66b82dc672b814aeb33479d0e358730",
+                "reference": "c6660d70d66b82dc672b814aeb33479d0e358730",
+                "shasum": ""
+            },
+            "require": {
+                "intervention/image": "^2.3",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Codingo\\Dropzoner\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Radunovic",
+                    "email": "ivan@codingo.me"
+                }
+            ],
+            "description": "Simpe Laravel package for image uploads using DropzoneJS library",
+            "keywords": [
+                "dropzone",
+                "laravel"
+            ],
+            "time": "2015-12-26 18:59:11"
         },
         {
             "name": "cviebrock/eloquent-sluggable",
@@ -684,16 +725,16 @@
         },
         {
             "name": "intervention/image",
-            "version": "2.3.8",
+            "version": "2.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "4064a980324f6c3bfa2bd981dfb247afa705ec3c"
+                "reference": "2bce9a59c43b868300b02a7d31a1e4aa67a200ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/4064a980324f6c3bfa2bd981dfb247afa705ec3c",
-                "reference": "4064a980324f6c3bfa2bd981dfb247afa705ec3c",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/2bce9a59c43b868300b02a7d31a1e4aa67a200ae",
+                "reference": "2bce9a59c43b868300b02a7d31a1e4aa67a200ae",
                 "shasum": ""
             },
             "require": {
@@ -742,7 +783,7 @@
                 "thumbnail",
                 "watermark"
             ],
-            "time": "2016-09-01 17:04:03"
+            "time": "2017-01-10 14:15:56"
         },
         {
             "name": "jakub-onderka/php-console-color",

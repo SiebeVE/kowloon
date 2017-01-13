@@ -9,4 +9,8 @@ class Faq extends Model {
 	use Translatable;
 
 	public $translatedAttributes = [ 'question', 'answer', 'slug' ];
+
+	public function products() {
+		return $this->belongsToMany('App\Faq');
+	}
 }

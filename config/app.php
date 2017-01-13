@@ -183,7 +183,7 @@ return [
 	    Dimsav\Translatable\TranslatableServiceProvider::class,
 	    Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
 	    Cviebrock\EloquentSluggable\ServiceProvider::class,
-	    Orangehill\Iseed\IseedServiceProvider::class
+	    Orangehill\Iseed\IseedServiceProvider::class,
     ],
 
     /*
