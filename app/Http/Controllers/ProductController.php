@@ -194,7 +194,7 @@ class ProductController extends BaseController {
 			"category" => "required|exists:categories,id",
 			"tags"     => "required|array",
 			"faqs"     => "required|array",
-			"colors"   => "required|array",
+			"colors"   => "array",
 			"price"    => 'required|min:0',
 		];
 		$inputFields = [
