@@ -1,0 +1,38 @@
+Deployment Document (tested on c9)
+===================
+-----Vereisten-----
+Apache
+PHP versie 5.6 >=
+MYSQL database met user en wachtwoord
+Sparkpost Account
+
+-----Install-----
+In command, ga naar map waar webserver moet komen
+
+---Voer uit---
+git init .
+git remote add origin https://github.com/SiebeVE/kowloon.git
+git pull origin master
+composer install
+cp .env.example .env
+php artisan key:generate
+
+---Pas Aan in .env---
+Verander nu in het .env bestand volgende zaken
+APP_URL=https:// -- Url van de applicatie (https://...)
+DB_DATABASE=db -- De naam van de databse
+DB_USERNAME=user -- De gebruikersnaam van de database
+DB_PASSWORD=pass -- Het wachtwoord van de database
+SPARKPOST_SECRET=secret -- De Sparkpost secret
+
+---Voer uit----
+php artisan migrate --seed
+
+---Pas Aan in .env---
+APP_ENV=local => APP_ENV=production
+
+De applicatie is nu klaar
+
+----LET OP----
+De documentRoot in uw apache config file moet naar de /public folder verwijzen
+
