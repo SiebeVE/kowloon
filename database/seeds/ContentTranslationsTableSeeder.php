@@ -176,14 +176,14 @@ class ContentTranslationsTableSeeder extends Seeder
                 'id' => 23,
                 'content_id' => 12,
                 'locale' => 'en',
-                'data' => 'articles.',
+                'data' => 'articles',
             ),
             23 => 
             array (
                 'id' => 24,
                 'content_id' => 12,
                 'locale' => 'nl',
-                'data' => 'artikelen.',
+                'data' => 'artikelen',
             ),
             24 => 
             array (
@@ -422,6 +422,160 @@ class ContentTranslationsTableSeeder extends Seeder
                 'content_id' => 29,
                 'locale' => 'nl',
                 'data' => 'Meer zien',
+            ),
+            58 => 
+            array (
+                'id' => 59,
+                'content_id' => 30,
+                'locale' => 'en',
+                'data' => 'Pet Concept, active since 1998, is developing, importing and exporting products for pets worldwide.',
+            ),
+            59 => 
+            array (
+                'id' => 60,
+                'content_id' => 30,
+                'locale' => 'nl',
+                'data' => 'Pet Concept, actief sinds 1998, ontwikkelt, importeert en exporteert producten voor dieren wereldwijd',
+            ),
+            60 => 
+            array (
+                'id' => 61,
+                'content_id' => 31,
+                'locale' => 'en',
+                'data' => 'Contact',
+            ),
+            61 => 
+            array (
+                'id' => 62,
+                'content_id' => 31,
+                'locale' => 'nl',
+                'data' => 'Contacteer ons',
+            ),
+            62 => 
+            array (
+                'id' => 63,
+                'content_id' => 32,
+                'locale' => 'en',
+                'data' => 'Leave us a message',
+            ),
+            63 => 
+            array (
+                'id' => 64,
+                'content_id' => 32,
+                'locale' => 'nl',
+                'data' => 'Laat ons een berich achter',
+            ),
+            64 => 
+            array (
+                'id' => 65,
+                'content_id' => 33,
+                'locale' => 'en',
+                'data' => 'Your message',
+            ),
+            65 => 
+            array (
+                'id' => 66,
+                'content_id' => 33,
+                'locale' => 'nl',
+                'data' => 'Jouw bericht',
+            ),
+            66 => 
+            array (
+                'id' => 67,
+                'content_id' => 34,
+                'locale' => 'en',
+                'data' => 'Write your message here',
+            ),
+            67 => 
+            array (
+                'id' => 68,
+                'content_id' => 34,
+                'locale' => 'nl',
+                'data' => 'Schrijf hier je bericht',
+            ),
+            68 => 
+            array (
+                'id' => 69,
+                'content_id' => 35,
+                'locale' => 'en',
+                'data' => 'Send',
+            ),
+            69 => 
+            array (
+                'id' => 70,
+                'content_id' => 35,
+                'locale' => 'nl',
+                'data' => 'Verstuur',
+            ),
+            70 => 
+            array (
+                'id' => 71,
+                'content_id' => 36,
+                'locale' => 'en',
+                'data' => 'Frequently asked questions',
+            ),
+            71 => 
+            array (
+                'id' => 72,
+                'content_id' => 36,
+                'locale' => 'nl',
+                'data' => 'Frequent gevraagde vragen',
+            ),
+            72 => 
+            array (
+                'id' => 73,
+                'content_id' => 37,
+                'locale' => 'en',
+                'data' => 'Went broke because of a faulty product',
+            ),
+            73 => 
+            array (
+                'id' => 74,
+                'content_id' => 37,
+                'locale' => 'nl',
+                'data' => 'Is failiet gegaan door een foutief product',
+            ),
+            74 => 
+            array (
+                'id' => 75,
+                'content_id' => 38,
+                'locale' => 'en',
+                'data' => 'About us',
+            ),
+            75 => 
+            array (
+                'id' => 76,
+                'content_id' => 38,
+                'locale' => 'nl',
+                'data' => 'Over ons',
+            ),
+            76 => 
+            array (
+                'id' => 79,
+                'content_id' => 40,
+                'locale' => 'en',
+                'data' => 'No products to show',
+            ),
+            77 => 
+            array (
+                'id' => 80,
+                'content_id' => 40,
+                'locale' => 'nl',
+                'data' => 'Geen producten weer te geven',
+            ),
+            78 => 
+            array (
+                'id' => 81,
+                'content_id' => 41,
+                'locale' => 'en',
+                'data' => 'Dimensions',
+            ),
+            79 => 
+            array (
+                'id' => 82,
+                'content_id' => 41,
+                'locale' => 'nl',
+                'data' => 'Dimensies',
             ),
         ));
         

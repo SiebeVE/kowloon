@@ -220,6 +220,83 @@ class ContentsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
+            29 => 
+            array (
+                'id' => 30,
+                'key_human' => 'about-us-first-read',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            30 => 
+            array (
+                'id' => 31,
+                'key_human' => 'about-us-contact',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            31 => 
+            array (
+                'id' => 32,
+                'key_human' => 'about-us-form-title',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            32 => 
+            array (
+                'id' => 33,
+                'key_human' => 'about-us-message-title',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            33 => 
+            array (
+                'id' => 34,
+                'key_human' => 'about-us-message-placeholder',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            34 => 
+            array (
+                'id' => 35,
+                'key_human' => 'about-us-submit-button',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            35 => 
+            array (
+                'id' => 36,
+                'key_human' => 'faq-title',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            36 => 
+            array (
+                'id' => 37,
+                'key_human' => 'about-us-second-read',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            37 => 
+            array (
+                'id' => 38,
+                'key_human' => 'about-us-title',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            38 => 
+            array (
+                'id' => 40,
+                'key_human' => 'product-no-products',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            39 => 
+            array (
+                'id' => 41,
+                'key_human' => 'specifications-dimensions',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
         ));
         
         
